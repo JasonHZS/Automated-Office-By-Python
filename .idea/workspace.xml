@@ -10,8 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b19990a-9b7d-49d6-93cc-4ceb55b31c52" name="Default Changelist" comment="提交excel_split&amp;merge.py">
-      <change beforePath="$PROJECT_DIR$/office_assistant/excel_split&amp;merge.py" beforeDir="false" afterPath="$PROJECT_DIR$/office_assistant/excel_split&amp;merge.py" afterDir="false" />
+    <list default="true" id="9b19990a-9b7d-49d6-93cc-4ceb55b31c52" name="Default Changelist" comment="excel读取数据-&gt;绘制图表-&gt;使用模板制作ppt">
+      <change afterPath="$PROJECT_DIR$/office_assistant/excel2ppt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Automated-Office-By-Python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Automated-Office-By-Python.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +63,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598433276465</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="excel读取数据-&gt;绘制图表-&gt;使用模板制作ppt">
+      <created>1598433550114</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1598433550114</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -79,16 +87,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="初次提交" />
     <MESSAGE value="提交excel_split&amp;merge.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="提交excel_split&amp;merge.py" />
+    <MESSAGE value="excel读取数据-&gt;绘制图表-&gt;使用模板制作ppt" />
+    <option name="LAST_COMMIT_MESSAGE" value="excel读取数据-&gt;绘制图表-&gt;使用模板制作ppt" />
   </component>
   <component name="WindowStateProjectService">
     <state x="526" y="201" key="SettingsEditor" timestamp="1598433047652">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="526" y="201" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1598433047652" />
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1598433290366">
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1598433571358">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1598433290366" />
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1598433571358" />
   </component>
 </project>
