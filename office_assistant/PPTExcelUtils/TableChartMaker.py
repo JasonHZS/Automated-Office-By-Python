@@ -40,11 +40,12 @@ def sign_data(ax, type, x, y, format):
 
 class Sheet4(object):
     def __init__(self):
-        self.path = "D:/项目文档/分析报告/3月大POS分析-副本.xlsx"
+        self.read_path = "D:/项目文档/分析报告/3月大POS分析-副本.xlsx"
+        self.save_path = "D:/项目文档/分析报告/pic/"
         self.sheet = 3
 
     def c_barline_trend(self):
-        df = pd.read_excel(self.path, sheet_name=self.sheet, skiprows=22, skipfooter=101)
+        df = pd.read_excel(self.read_path, sheet_name=self.sheet, skiprows=22, skipfooter=101)
         df1 = df.iloc[3:15, [0, 1]]  # 柱形图
         df2 = df.iloc[3:15, [0, 2]]  # 折线图
         df2['增长率'] = df2['增长率'] * 100
@@ -72,11 +73,11 @@ class Sheet4(object):
         plt.text(0.1, 480, '单位：万', fontsize=12)
         ax.tick_params(labelsize=14)  # 修改ax对象xy轴字体
         ax2.tick_params(labelsize=14)  # 修改ax2对象xy轴字体
-        plt.savefig("D:/项目文档/分析报告/pic/大POS新增入网商户数趋势.jpg", dpi=500)
+        plt.savefig(self.save_path + "大POS新增入网商户数趋势.jpg", dpi=500)
         # plt.show()
 
     def c_barline_activity(self):
-        df = pd.read_excel(self.path, sheet_name=self.sheet, skiprows=51, skipfooter=72)
+        df = pd.read_excel(self.read_path, sheet_name=self.sheet, skiprows=51, skipfooter=72)
         df1 = df.iloc[3:15, [0, 1, 2, 3, 4]]
 
         month = df1['月份'].astype('str').values
@@ -113,30 +114,31 @@ class Sheet4(object):
         plt.text(0.1, 75, '单位：万', fontsize=12)
         ax.tick_params(labelsize=14)
         ax2.tick_params(labelsize=14)
-        plt.savefig("D:/项目文档/分析报告/pic/大POS商户活跃度.jpg", dpi=500)
+        plt.savefig(self.save_path + "大POS商户活跃度.jpg", dpi=500)
         # plt.show()
 
     def c_pie_merchant(self):
-        df = pd.read_excel(self.path, sheet_name=self.sheet, skiprows=40, skipfooter=95)
+        df = pd.read_excel(self.read_path, sheet_name=self.sheet, skiprows=40, skipfooter=95)
         df1 = df.iloc[0:2, [0, 2]].set_index('新增类别')
         df2 = df.iloc[0:3, [3, 5]].set_index('存量类型')
         df1.plot(kind='pie', autopct='%.0f%%', fontsize=15, subplots=True, explode=(0.01, 0.01), startangle=90, legend=False, figsize=(7, 7))
         plt.title('3月大POS新增入网商户分布', size=25)
-        plt.savefig("D:/项目文档/分析报告/pic/3月大POS新增入网商户分布.jpg", dpi=500)
+        plt.savefig(self.save_path + "3月大POS新增入网商户分布.jpg", dpi=500)
         df2.plot(kind='pie', autopct='%.0f%%', fontsize=15, subplots=True, explode=(0.01, 0.01, 0.01), startangle=90,
                  legend=False, figsize=(7, 7))
         plt.title('大POS存量商户分布', size=25)
-        plt.savefig("D:/项目文档/分析报告/pic/大POS存量商户分布.jpg", dpi=500)
+        plt.savefig(self.save_path + "大POS存量商户分布.jpg", dpi=500)
         # plt.show()
 
 
 class Sheet3(object):
     def __init__(self):
-        self.path = "D:/项目文档/分析报告/3月大POS分析-副本.xlsx"
+        self.read_path = "D:/项目文档/分析报告/3月大POS分析-副本.xlsx"
+        self.save_path = "D:/项目文档/分析报告/pic/"
         self.sheet = 2
 
     def c_barline_amount(self):
-        df = pd.read_excel(self.path, sheet_name=self.sheet, skiprows=1, skipfooter=97)
+        df = pd.read_excel(self.read_path, sheet_name=self.sheet, skiprows=1, skipfooter=97)
         df1 = df.iloc[3:15, [0, 1, 2, 3]]
 
         month = df1['月份'].astype('str').values
@@ -166,11 +168,11 @@ class Sheet3(object):
         plt.text(0.01, 180, '单位：亿元', fontsize=12)
         ax.tick_params(labelsize=14)
         ax2.tick_params(labelsize=14)
-        plt.savefig("D:/项目文档/分析报告/pic/大POS交易金额趋势图.jpg", dpi=500)
+        plt.savefig(self.save_path + "大POS交易金额趋势图.jpg", dpi=500)
         # plt.show()
 
     def c_ring_pnums(self):
-        df = pd.read_excel(self.path, sheet_name=self.sheet, skiprows=55, skipfooter=48)
+        df = pd.read_excel(self.read_path, sheet_name=self.sheet, skiprows=55, skipfooter=48)
         df1 = df.iloc[0:7, [0, 2]].set_index(keys='交易类型')
         df2 = df.iloc[8:10, [0, 2]].set_index('交易类型')
         explode = (0.04, 0.01, 0.01, 0.02, 0.05, 0.1, 0.01)
@@ -189,13 +191,13 @@ class Sheet3(object):
                      pctdistance=0.85, figsize=(8, 7))
         plt.axis('equal')  # 设置x，y轴刻度一致，这样饼图才能是圆的
         plt.title('3月各交易类型交易笔数', size=22)
-        plt.savefig("D:/项目文档/分析报告/pic/3月各交易类型交易笔数.jpg", dpi=500)
+        plt.savefig(self.save_path + "3月各交易类型交易笔数.jpg", dpi=500)
         # plt.show()
         df1.sort_values(by="笔数占比", ascending=False, inplace=True)
         return df1[0:3].index.values, df1[0:3].values
 
     def c_ring_pamount(self):
-        df = pd.read_excel(self.path, sheet_name=self.sheet, skiprows=72, skipfooter=32)
+        df = pd.read_excel(self.read_path, sheet_name=self.sheet, skiprows=72, skipfooter=32)
         df1 = df.iloc[0:7, [0, 1]].set_index('交易类型')
         # df1['金额占比'] = df1['金额占比'].apply(lambda x: "{:.2%}".format(float(x)))
         df2 = df.iloc[7:9, [0, 1]].set_index('交易类型')
@@ -210,7 +212,7 @@ class Sheet3(object):
                      pctdistance=0.85, figsize=(8, 7))
         plt.axis('equal')  # 设置x，y轴刻度一致，这样饼图才能是圆的
         plt.title('3月各交易类型交易金额', size=22)
-        plt.savefig("D:/项目文档/分析报告/pic/3月各交易类型交易金额.jpg", dpi=500)
+        plt.savefig(self.save_path + "3月各交易类型交易金额.jpg", dpi=500)
         # plt.show()
         df1.sort_values(by="金额占比", ascending=False, inplace=True)
         return df1[0:3].index.values, df1[0:3].values
@@ -218,18 +220,19 @@ class Sheet3(object):
 
 class Sheet1(object):
     def __init__(self):
-        self.path = "D:/项目文档/分析报告/3月大POS分析-副本.xlsx"
+        self.read_path = "D:/项目文档/分析报告/3月大POS分析-副本.xlsx"
+        self.save_path = "D:/项目文档/分析报告/pic/"
         self.sheet = 0
 
     def t_profit_ranking(self):
-        df = pd.read_excel(self.path, sheet_name=self.sheet, skiprows=19, skipfooter=32)
+        df = pd.read_excel(self.read_path, sheet_name=self.sheet, skiprows=19, skipfooter=32)
         df1 = df.iloc[0:11, [0, 1, 2, 3, 4]]
         # 将该列格式化（加上‘+’或‘-’）输出,':+.0f'的对象必须是浮点数
         df1['Unnamed: 1'][1:11] = df1['Unnamed: 1'][1:11].apply(lambda x: "{:+.0f}".format(float(x)) if x != '-' else x)
         return df1, df1.shape[0], df1.shape[1]
 
     def t_bpos_profit(self):
-        df = pd.read_excel(self.path, sheet_name=self.sheet, skiprows=34, skipfooter=14)
+        df = pd.read_excel(self.read_path, sheet_name=self.sheet, skiprows=34, skipfooter=14)
         df1 = df.iloc[0:14, [0, 1, 2, 3, 4, 5, 6, 7, 8]]
         df1['Unnamed: 1'][1:14] = df1['Unnamed: 1'][1:14].apply(lambda x: "{:.0f}".format(float(x)))
         df1['Unnamed: 2'][1:14] = df1['Unnamed: 2'][1:14].apply(lambda x: "{:.0f}".format(float(x)))
@@ -246,16 +249,16 @@ class Sheet1(object):
         sheet1对应数据生成3月收益分布饼图
         :return:
         """
-        df = pd.read_excel(self.path, sheet_name=self.sheet)
+        df = pd.read_excel(self.read_path, sheet_name=self.sheet)
         df1 = df.iloc[0:3, [12, 13]].set_index(keys='当月收益分布')
         explode = (0.01, 0.01, 0.01)
         df1.plot(kind='pie', autopct='%.0f%%', fontsize=15, subplots=True, explode=explode, startangle=90, legend=False, figsize=(7, 7))
         df2 = df.iloc[[0, 15], [4, 5, 6, 7, 8]]
-        plt.savefig("D:/项目文档/分析报告/pic/3月收益分布.jpg", dpi=500)
+        plt.savefig(self.save_path + "3月收益分布.jpg", dpi=500)
         return df1, df2
 
     def c_barline_profit(self):
-        df = pd.read_excel(self.path, sheet_name=self.sheet, skiprows=1, skipfooter=46)
+        df = pd.read_excel(self.read_path, sheet_name=self.sheet, skiprows=1, skipfooter=46)
         df1 = df.iloc[3:15, [0, 1, 2, 3, 4, 5, 6]]  # 柱形图——收益
 
         month = df1['月份'].astype('str').values
@@ -293,5 +296,5 @@ class Sheet1(object):
         ax2.tick_params(labelsize=14)
         ax.legend(loc='lower right', bbox_to_anchor=(0.5, -0.15), ncol=3, frameon=False, fontsize=13)
         ax2.legend(loc='lower left', bbox_to_anchor=(0.5, -0.15), ncol=3, frameon=False, fontsize=13)
-        plt.savefig("D:/项目文档/分析报告/pic/大POS收益趋势图.jpg", dpi=500)
+        plt.savefig(self.save_path + "大POS收益趋势图.jpg", dpi=500)
         # plt.show()

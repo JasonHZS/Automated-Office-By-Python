@@ -43,6 +43,7 @@ class PPT(object):
     def __init__(self):
         self.read_path = 'D:/项目文档/分析报告/model.pptx'
         self.save_path = "D:/项目文档/分析报告/1www.pptx"
+        self.pic_path = "D:/项目文档/分析报告/pic/"
 
     def p2_operate(self):
         prs = Presentation(self.read_path)
@@ -59,10 +60,12 @@ class PPT(object):
                     amount3=profit_list[1][0], rate4=rate_list[1][1], amount4=profit_list[2][0], rate5=rate_list[1][2])
         body_shapes[2].text_frame.fit_text(font_family=u'SimSun-ExtB', max_size=14)
         # 添加图表
+        TableChartMaker.Sheet1().c_barline_profit()
         p2_bar_left, p2_bar_top, p2_bar_width, p2_bar_height = Inches(0.05), Inches(1.9), Inches(8), Inches(4)  # 预设位置及大小
-        slide.shapes.add_picture('D:/项目文档/分析报告/pic/大POS收益趋势图.jpg', p2_bar_left, p2_bar_top, p2_bar_width, p2_bar_height)
+        slide.shapes.add_picture(self.pic_path + '大POS收益趋势图.jpg', p2_bar_left, p2_bar_top, p2_bar_width, p2_bar_height)
+        TableChartMaker.Sheet1().c_pie_profit()
         p2_pie_left, p2_pie_top, p2_pie_width, p2_pie_height = Inches(8), Inches(1.9), Inches(4.5), Inches(4.2)
-        slide.shapes.add_picture('D:/项目文档/分析报告/pic/3月收益分布.jpg', p2_pie_left, p2_pie_top, p2_pie_width, p2_pie_height)
+        slide.shapes.add_picture(self.pic_path + '3月收益分布.jpg', p2_pie_left, p2_pie_top, p2_pie_width, p2_pie_height)
 
         prs.save(self.save_path)
         print('第2页制作完成')
@@ -119,10 +122,12 @@ class PPT(object):
                     type4=pay_nums_type[0], proportion2=nums_proportion[0][0], type5=pay_nums_type[1], type6=pay_nums_type[2])
         body_shapes[2].text_frame.fit_text(font_family=u'SimSun-ExtB', max_size=14)
         # 添加图表
+        TableChartMaker.Sheet3().c_ring_pamount()
         p9_left1, p9_top1, p9_width1, p9_height1 = Inches(1.5), Inches(2.5), Inches(5.1), Inches(4.5)  # 预设位置及大小
-        slide.shapes.add_picture('D:/项目文档/分析报告/pic/3月各交易类型交易金额.jpg', p9_left1, p9_top1, p9_width1, p9_height1)
+        slide.shapes.add_picture(self.pic_path + '3月各交易类型交易金额.jpg', p9_left1, p9_top1, p9_width1, p9_height1)
+        TableChartMaker.Sheet3().c_ring_pnums()
         p9_left2, p9_top2, p9_width2, p9_height2 = Inches(7), Inches(2.5), Inches(5.1), Inches(4.5)  # 预设位置及大小
-        slide.shapes.add_picture('D:/项目文档/分析报告/pic/3月各交易类型交易笔数.jpg', p9_left2, p9_top2, p9_width2, p9_height2)
+        slide.shapes.add_picture(self.pic_path + '3月各交易类型交易笔数.jpg', p9_left2, p9_top2, p9_width2, p9_height2)
 
         prs.save(self.save_path)
         print('第9页制作完成')
