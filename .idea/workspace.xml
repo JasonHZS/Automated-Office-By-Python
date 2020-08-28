@@ -10,9 +10,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9b19990a-9b7d-49d6-93cc-4ceb55b31c52" name="Default Changelist" comment="excel读取数据-&gt;绘制图表-&gt;使用模板制作ppt">
-      <change afterPath="$PROJECT_DIR$/office_assistant/excel2ppt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Automated-Office-By-Python.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Automated-Office-By-Python.iml" afterDir="false" />
+    <list default="true" id="9b19990a-9b7d-49d6-93cc-4ceb55b31c52" name="Default Changelist" comment="excel2ppt.py">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/office_assistant/PPTExcelUtils/TableChartMaker.py" beforeDir="false" afterPath="$PROJECT_DIR$/office_assistant/PPTExcelUtils/TableChartMaker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/office_assistant/PPTExcelUtils/pptMaker.py" beforeDir="false" afterPath="$PROJECT_DIR$/office_assistant/PPTExcelUtils/pptMaker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/office_assistant/excel2ppt.py" beforeDir="false" afterPath="$PROJECT_DIR$/office_assistant/excel2ppt.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,13 +32,37 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/office_assistant" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/office_assistant/excel2ppt.py" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\workspace_py\PycharmProjects\Automated-Office-By-Python\office_assistant" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Automated-Office-By-Python" type="PythonConfigurationType" factoryName="Python">
+      <module name="Automated-Office-By-Python" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="D:\develop_software1\anaconda3\envs\test\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/office_assistant" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/office_assistant/excel2ppt.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -70,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598433550114</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="excel2ppt.py">
+      <created>1598433808220</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1598433808220</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -83,21 +116,67 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="初次提交" />
     <MESSAGE value="提交excel_split&amp;merge.py" />
     <MESSAGE value="excel读取数据-&gt;绘制图表-&gt;使用模板制作ppt" />
-    <option name="LAST_COMMIT_MESSAGE" value="excel读取数据-&gt;绘制图表-&gt;使用模板制作ppt" />
+    <MESSAGE value="excel2ppt.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="excel2ppt.py" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="526" y="201" key="SettingsEditor" timestamp="1598433047652">
+    <state x="479" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1598595024942">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="526" y="201" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1598433047652" />
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1598433571358">
+    <state x="479" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1598595024942" />
+    <state x="805" y="311" key="FileChooserDialogImpl" timestamp="1598585688969">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1598433571358" />
+    <state x="805" y="311" key="FileChooserDialogImpl/0.0.2048.1112@0.0.2048.1112" timestamp="1598585688969" />
+    <state width="2027" height="332" key="GridCell.Tab.0.bottom" timestamp="1598606819427">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2027" height="332" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1598606819427" />
+    <state width="2027" height="332" key="GridCell.Tab.0.center" timestamp="1598606819427">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2027" height="332" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1598606819427" />
+    <state width="2027" height="332" key="GridCell.Tab.0.left" timestamp="1598606819427">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2027" height="332" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1598606819427" />
+    <state width="2027" height="332" key="GridCell.Tab.0.right" timestamp="1598606819427">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2027" height="332" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1598606819427" />
+    <state width="2027" height="206" key="GridCell.Tab.1.bottom" timestamp="1598606734113">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2027" height="206" key="GridCell.Tab.1.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1598606734113" />
+    <state width="2027" height="206" key="GridCell.Tab.1.center" timestamp="1598606734113">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2027" height="206" key="GridCell.Tab.1.center/0.0.2048.1112@0.0.2048.1112" timestamp="1598606734113" />
+    <state width="2027" height="206" key="GridCell.Tab.1.left" timestamp="1598606734113">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2027" height="206" key="GridCell.Tab.1.left/0.0.2048.1112@0.0.2048.1112" timestamp="1598606734113" />
+    <state width="2027" height="206" key="GridCell.Tab.1.right" timestamp="1598606734113">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2027" height="206" key="GridCell.Tab.1.right/0.0.2048.1112@0.0.2048.1112" timestamp="1598606734113" />
+    <state x="526" y="201" key="SettingsEditor" timestamp="1598585838381">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="526" y="201" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1598585838381" />
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2" timestamp="1598433826665">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="617" y="289" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1598433826665" />
+    <state x="93" y="93" width="1862" height="926" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1598594195353">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="93" y="93" width="1862" height="926" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1598594195353" />
   </component>
 </project>
